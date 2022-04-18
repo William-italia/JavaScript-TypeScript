@@ -8,4 +8,4 @@ imc = peso / Math.pow(alturaEmM, 2);
 const imcFormatado = imc.toFixed(2);
 const anoNascimento = 2022 - idade;
 
-console.log(`${nome + sobrenome} tem ${idade} anos, nasceu em ${anoNascimento}, pesa ${peso}kg tem ${alturaEmM} de altura e seu IMC é de ${imcFormatado}.`)
+console.log(`${nome + sobrenome} tem ${idade} anos, nasceu em ${anoNascimento}, pesa ${peso}kg tem ${alturaEmM} de altura e seu IMC é de ${imcFormatado}.`);
