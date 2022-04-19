@@ -25,7 +25,8 @@ contador++;
 console.log(contador);
 
 const num01 = 10;
-const num02 = parseFloat('5.2');
+// parseInt (inteiro) Parsefloat(decimal) number
+const num02 = Number('5.2');
 
 console.log(num01 + num02);
 console.log(typeof num02);
