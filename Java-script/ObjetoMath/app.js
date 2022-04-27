@@ -1,5 +1,6 @@
 let num1 = 9.44578;
 let num2 = 9;
+
 // Arredonda o numero pra baixo
 // let num2 = Math.floor(num1);
 
