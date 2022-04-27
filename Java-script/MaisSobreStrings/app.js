@@ -4,7 +4,7 @@ let texto = "O Rato Roeu a Roupa Do Rei De Roma.";
 console.log(texto[18]);
 console.log(texto.charAt(7));
 console.log(texto.concat(' Em um lindo dia'));
-console.log(texto.indexOf('rei'));
+// console.log(texto.indexOf('rei'));
 console.log(texto.indexOf('ei', 18));
 console.log(texto.lastIndexOf('o'));
 console.log(texto.lastIndexOf('o', 30));
