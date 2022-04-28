@@ -14,3 +14,4 @@ const aprovado = false; // Boolean = true, false (Lógico)
 
 console.log(typeof sobrenomeAluno)
 // console.log()
+
