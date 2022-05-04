@@ -4,13 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Docume</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https: //fonts.googleapis.com/css2? family= Roboto:ital,wght@0,400;0,900;1,300 & display=swap"
-      rel="stylesheet"
-    />
+    <title>Calcule seu IMC</title>
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
@@ -60,22 +54,21 @@
         <div class="text">
           <p>Calcule seu IMC</p>
         </div>
-
         <div class="form-container">
-          <form action="">
+          <form id="formulario" action="/" method="post">
             <div class="input-container">
               <label for="inputPeso">Peso:</label>
-              <input type="text" id="inputPeso" />
+              <input type="text" id="inputPeso" name="inputPeso" />
             </div>
-
             <div class="input-container">
               <label for="inputAltura">Altura:</label>
-              <input type="text" id="inputAltura" />
+              <input type="text" id="inputAltura" name="inputAltura" />
             </div>
 
             <button>Enviar</button>
           </form>
         </div>
+        <div id="resultado"></div>
       </div>
     </section>
     <script src="./assets/js/main.js"></script>
