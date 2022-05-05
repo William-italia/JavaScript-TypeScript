@@ -89,9 +89,14 @@ form button:hover {
   line-height: 1.3;
 }
 
-.paragrafo-resultado {
+.paragrafo-resultado,
+.bad {
   background: rgb(109, 255, 182);
   padding: 10px 20px;
   color: black;
   width: 100%;
+}
+
+.bad {
+  background: rgb(255, 109, 109);
 }
