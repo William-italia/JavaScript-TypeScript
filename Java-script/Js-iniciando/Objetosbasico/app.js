@@ -1,4 +1,4 @@
-// const pessoa1 = {
+// const pessoA = {
 //     nome: 'Luiz', 
 //     Sobrenome: 'Miranda',
 //     idade: 25
@@ -19,7 +19,7 @@
 //     return { nome, Sobrenome, idade };
 // }
 
-// const pessoa1 = criaPessoa('Luiz', 'Otávio', 25);
+// const pessoa = criaPessoa('Luiz', 'Otávio', 25);
 // const pessoa2 = criaPessoa('Jorge', 'Pereira', 30);
 // const pessoa3 = criaPessoa('Roberto', 'Carlos', 55);
 // const pessoa4 = criaPessoa('Cleitinho', 'Silva', 12);
