@@ -1,4 +1,4 @@
-const h1 = document.querySelector('#Monstra-Data h1');
+const h1 = document.querySelector('#Mostra-Data h1');
 const date = new Date();
 
 function getDayWeek (DayWeek) {
@@ -28,6 +28,10 @@ function CreateDate (date) {
     `${NameDay}, ${zero(MonthNum)} ${MonthName}` +
     ` De ${date.getFullYear()} ${zero(date.getHours())}:${zero(date.getMinutes())}:${zero(date.getSeconds())}`
     );
+}
+
+function initTime () {
+    setInterval(CreateDate, 1000);
 }
 
 h1.innerHTML = CreateDate(date);
