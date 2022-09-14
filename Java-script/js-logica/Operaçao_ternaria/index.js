@@ -4,7 +4,7 @@ const UserPoints = 999;
 const UserLevel = UserPoints >= 1000 ? 'Vip User' : 'Normal User';
 
 const colorUser = null;
-const DefaultColor = colorUser || 'Preta'
+const DefaultColor = colorUser || 'Azul'
 
 console.log(UserLevel, DefaultColor);
 
