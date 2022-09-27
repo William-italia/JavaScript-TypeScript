@@ -1,4 +1,4 @@
-const hora = 0;
+const hora = 12;
 
 if (hora >= 0 && hora <= 11) {
     console.log('Bom dia! linda, casada?');
