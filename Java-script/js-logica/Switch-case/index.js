@@ -34,7 +34,19 @@ function getDayText (dayWeek) {
     }
 }
 
-console.log(getDayText(4))
+
+const data = new Date('1987-04-20 00:00:00');
+const dayWeek = data.getDay();
+const dayweektext = getDayText(dayWeek);
+
+console.log(dayWeek, dayweektext);
+
+// const data = new Date('1987-04-20 00:00:00');
+// const diaSemana = data.getDay();
+// const diaSemanaTexto = getDayText(diaSemana);
+
+// console.log(diaSemana, diaSemanaTexto);
+
 
 // function getDayText (diaSemana) {
 
@@ -70,11 +82,6 @@ console.log(getDayText(4))
  
 // }
 
-// const data = new Date('1987-04-20 00:00:00');
-// const diaSemana = data.getDay();
-// const diaSemanaTexto = getDayText(diaSemana);
-
-// console.log(diaSemana, diaSemanaTexto);
 
 
 
