@@ -34,7 +34,7 @@
 .container {
     background: #ddd;
     width: 90vw;
-    height: 60vh;
+    height: 70vh;
     padding: 2rem;
     border-radius: 1rem;
 }
@@ -64,11 +64,12 @@ h3 {
 
 .form label {
     display: block;
+    margin-bottom: .4rem;
 }
 
 .form input {
     width: 100%;
-    padding: .3rem;
+    padding: .8rem;
     border: none;
 }
 .btn {
@@ -78,7 +79,7 @@ h3 {
     background: #333;
     color: #fff;
     margin-top: 1rem;
-    padding: .4rem;
+    padding: .8rem;
     cursor: pointer;
     transition: .5s;
 }
@@ -86,4 +87,19 @@ h3 {
 .btn:hover {
     background-color: #fff;
     color: #333;
+}
+
+p.paragrafo-resultado {
+    background: aqua;
+    display: block;
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 1.2rem
+}
+p.paragrafo-error {
+    background: red;
+    display: block;
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 1.2rem
 }
