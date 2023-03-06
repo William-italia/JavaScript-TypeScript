@@ -86,7 +86,7 @@ console.log(dayWeek, dayweektext);
 
 
 
-
+// console.log('bom dia piranhas')
 
 // diaSemana = 7;
 
