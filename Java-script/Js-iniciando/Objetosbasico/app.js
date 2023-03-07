@@ -42,3 +42,5 @@ const pessoa1 = {
 }
 
 pessoa1.fala();
+
+// que dor de cabeça mano slk
