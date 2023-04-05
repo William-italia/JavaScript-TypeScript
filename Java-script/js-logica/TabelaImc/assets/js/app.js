@@ -1,40 +1,18 @@
 const form = document.querySelector('.form'); 
 
-form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    const inputPeso = e.target.querySelector('#peso')
-    const inputAltura = e.target.querySelector('#altura')
-
-    const peso = Number(inputPeso.value);
-    const altura = Number(inputAltura.value);
-    const imc = getIMC(peso, altura );
-
-    if (!peso || !altura   ) {
-        console.log('Digite apenas numeros');
-        setResult('Peso ou Altura Inválidos!', false)
-        return
-    } else {
-        return setResult(`valor do Imc: ${imc}`);
-    }
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    console.log('Evento Previnido!');
+    setResult('Olá mundo');
 });
 
+// functions
 
-function getIMC(peso, altura) {
-    return imc = peso / altura ** 2;
+// Imprime o que é desejado na <div> com o id="resultado".
+function setResult (msg) {
+    const resultado = document.querySelector('#resultado')
+    resultado.innerHTML = msg
 }
 
-function createParagraph (className) {
-    const p = document.createElement('p');
-    return p;
-}
-
-function setResult (msg, isValid) {
-    const result = document.querySelector('.resultado');
-    result.innerHTML = ''; 
-
-    const p = createParagraph();
-    // p.classList.add('paragrafo-resultadov')
-    p.innerHTML = msg;
-    result.appendChild(p)
-}
+// 
 
