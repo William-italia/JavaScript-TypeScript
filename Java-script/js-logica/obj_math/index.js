@@ -3,9 +3,11 @@
 
 const alunos = ['Luiz', 'João', 'Maria'];
 
-// delete alunos[2];
+
+
 console.log(alunos);
 
+// delete alunos[2];
 // const removido = alunos.shift(); remove o primeiro da lista
 // const removido = alunos.pop(); remove o ultimo da lista
 
