@@ -29,4 +29,4 @@ const pessoa = {
 const { nome, sobrenome} = pessoa;
 console.log(nome, sobrenome);
 
-w
+console.log(pessoa);

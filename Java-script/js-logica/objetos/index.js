@@ -40,20 +40,35 @@
 
 // console.log(person1.name, person2.name);
 
-const person1 = {
-    name: 'Luiz',
-    lastname: 'Otávio',
-    old: 25, 
+// const person1 = {
+//     name: 'Luiz',
+//     lastname: 'Otávio',
+//     old: 25, 
 
-    fala () {
-        console.log(`${this.name} ${this.lastname} está falando oi...`);
-        console.log(`Minha idade atual é ${this.old}.`);
-    },
-    incrementOld() {
-        this.old++;
-    }
+//     fala () {
+//         console.log(`${this.name} ${this.lastname} está falando oi...`);
+//         console.log(`Minha idade atual é ${this.old}.`);
+//     },
+//     incrementOld() {
+//         this.old++;
+//     }
+// }
+
+// person1.fala();
+// person1.incrementOld();
+// person1.fala();
+
+
+function createPerson(name, lastname, weight, height) {
+
+    const person = {
+        name,
+        lastname,
+        weight,
+        height
+    };
+
+    return `${name}${lastname}${weight}${height}`
 }
 
-person1.fala();
-person1.incrementOld();
-person1.fala();
+createPerson('william', 'italia', '90', '1.80');
