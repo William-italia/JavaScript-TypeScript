@@ -1,4 +1,4 @@
-const data = new Date();
+const date = new Date();
 
 function getWeekDayText(dtWeek) {
     let WeekDayText;
@@ -62,17 +62,28 @@ function TimeFormat(dtTime) {
     return `Clock: ${hours}:${minutes}:${seconds}`;
 }
 function CalendarFormat (dtcalendar) {
-    return `${getWeekDayText(data.getDate())}, ${leftZero(data.getDate())} de ${getMonthText(data.getMonth())} de ${data.getFullYear()}`;
+    return `${getWeekDayText(date.getDate())}, ${leftZero(date.getDate())} de ${getMonthText(date.getMonth())} de ${date.getFullYear()}`;
 } 
 function PrintCalendar (Date) {
     const h1 = document.querySelector('.H1');
     const h3 = document.querySelector('.H3');
 
-    const printh1 = CalendarFormat(data);
-    const printh3 = TimeFormat(data);
+    const printh1 = CalendarFormat(date);
+    const printh3 = TimeFormat(date);
 
     h1.innerHTML = printh1;
     h3.innerHTML = printh3;
 }
 
-PrintCalendar(data);
+PrintCalendar(date);
+
+// const h1 = document.querySelector('h1');
+// const h3 = document.querySelector('h3');
+
+// const data = new Date();
+// const options = {
+//     dateStyle: 'full',
+//     timeStyle: 'short' nn está funcionando por algum motivo;
+// };
+
+// h1.innerHTML = data.toLocaleDateString('pt-BR', { dateStyle: 'full' });
