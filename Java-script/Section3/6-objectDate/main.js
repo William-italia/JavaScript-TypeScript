@@ -16,19 +16,19 @@
 // console.log(data.toString());
 // console.log(Date.now());
 
-function ZeroE (num) {
+function ZeroE(num) {
     return num >= 10 ? num : `0${num}`;
 }
 
 function FormataData(data) {
-    const dia     =  ZeroE(data.getDate());
-    const mes     =  ZeroE(data.getMonth() + 1);
-    const ano     =  ZeroE(data.getFullYear());
-    const hora    =  ZeroE(data.getHours());
-    const minuto  =  ZeroE(data.getMinutes());
-    const segundo =  ZeroE(data.getSeconds());
-    const ms      =  ZeroE(data.getMilliseconds());
-    
+    const dia = ZeroE(data.getDate());
+    const mes = ZeroE(data.getMonth() + 1);
+    const ano = ZeroE(data.getFullYear());
+    const hora = ZeroE(data.getHours());
+    const minuto = ZeroE(data.getMinutes());
+    const segundo = ZeroE(data.getSeconds());
+    const ms = ZeroE(data.getMilliseconds());
+
     return `${dia}/${mes}/${ano} ${hora}:${minuto}:${segundo} ms:${ms}`;
 }
 

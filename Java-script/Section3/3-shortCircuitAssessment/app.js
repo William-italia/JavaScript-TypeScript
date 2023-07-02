@@ -7,7 +7,7 @@ null / undefined
 NaN
 */
 
-function falaOi () {
+function falaOi() {
     return 'Oi'
 }
 

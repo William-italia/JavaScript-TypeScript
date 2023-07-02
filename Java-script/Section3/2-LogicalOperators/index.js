@@ -2,13 +2,13 @@
 Operadores logicos
 && -> AND -> E todas as expressões precisam ser verdadeiras para retornar verdadeiro;
 || -> OR  -> OU pelo menos uma expressão precisa ser verdadeira para retornar true;
-!  -> NOT -> NÃO 
+!  -> NOT -> NÃO
 */
 
 // Sol = true;
 // chuva = false;
 
-// notmoney = false; 
+// notmoney = false;
 // money = true;
 
 
