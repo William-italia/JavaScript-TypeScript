@@ -70,3 +70,14 @@ form > button {
 form > button:hover {
     background: #7882f7ee;
 }
+
+.paragrafos {
+    background: red;
+    margin: 1rem;
+
+}
+
+.paragrafos p {
+    margin: 1rem;
+    padding: 1rem;
+}

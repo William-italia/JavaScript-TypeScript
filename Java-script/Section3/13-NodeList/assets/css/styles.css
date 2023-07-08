@@ -70,3 +70,7 @@ form > button {
 form > button:hover {
     background: #d95858;
 }
+
+bgColorBody {
+    background: rgb(89, 210, 247);
+}

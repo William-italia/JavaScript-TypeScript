@@ -20,3 +20,4 @@ console.log('----------------------------------------');
 nomes.forEach(function(valor, indice, array) {
     console.log(indice+':', valor+';', array);
 });
+
