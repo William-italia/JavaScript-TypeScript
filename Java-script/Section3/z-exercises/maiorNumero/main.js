@@ -4,3 +4,4 @@ function Max(x, y) {
 };
 
 const MaiorNumero = Max(55, 200);
+
