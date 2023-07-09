@@ -8,10 +8,7 @@ for (let i = 0; i < frutas.length; i++) {
     } else {
         console.log(`Índice ${i +1}: ${frutas[i]}.`);
     }
-
-
 }
-
 
 // for (let i = 0; i <= 10; i++) {
 //     console.log(i);
