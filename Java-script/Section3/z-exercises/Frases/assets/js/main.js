@@ -15,9 +15,10 @@ for (let i = 0; i < elementos.length; i++) {
     const criaTexto = document.createTextNode(texto);
     criaTag.appendChild(criaTexto);
     elemento.appendChild(criaTag);
-}   
+}       
 
 container.appendChild(elemento);
+
 
 
 
