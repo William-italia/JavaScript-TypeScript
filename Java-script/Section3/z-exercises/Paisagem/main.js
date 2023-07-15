@@ -1,6 +1,5 @@
 function paisagem (Width, Height) {
     return Width > Height ? 'Horizontal' : 'Vertical';
-    // return Width > Height;
 }
 
 console.log(paisagem(1920, 1080));

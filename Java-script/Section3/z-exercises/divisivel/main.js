@@ -71,4 +71,10 @@
         console.log(num, Divisivel(num));
     }
 
+<<<<<<< HEAD
+    console.log(Divisivel(number));
+    number++
+    }
+=======
  
+>>>>>>> 67bddb7758be26be76158c0dc8b12adf7072e0cb

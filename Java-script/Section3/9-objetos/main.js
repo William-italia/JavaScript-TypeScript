@@ -10,9 +10,10 @@ const pessoa = {
 
 
 // atribuição via desustruturação
-const { endereco: {rua: r, numero: num}, endereco } = pessoa;
+// const { endereco: {rua: r, numero: num}, endereco } = pessoa;
 // const {nome: n = 'Vazio', sobrenome, idade} = pessoa;
 // const {nome, sobrenome, idade} = pessoa;
 
 // console.log(n, sobrenome, idade);
-console.log(r, num, endereco);
+// console.log(r, num, endereco);]
+
