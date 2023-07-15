@@ -1,10 +1,10 @@
 function RetornaHora() {
-
-    const data = new Date();
     
-    return data.toLocaleTimeString('pt-BR', {
+    const Data = new Date();
+    
+    return Data.toLocaleTimeString('pt-BR', {
         hour12: false,
-    });
+   });
 }
 
 // function setIntervalTimer() {
