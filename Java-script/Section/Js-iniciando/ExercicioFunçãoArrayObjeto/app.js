@@ -1,6 +1,6 @@
-function escopo () {
+function escopo() {
     const form = document.querySelector('.form');
-    const resultado = document.querySelector('.resultado');
+    const resultado = document.querySelector('.resultado')
 
     const pessoas = [];
 
@@ -15,10 +15,10 @@ function escopo () {
         pessoas.push({
             nome: nome.value,
             sobrenome: sobrenome.value,
-            peso: peso.value,
+            peso: peso.value, 
             altura: altura.value
         });
-
+        
         console.log(pessoas);
         resultado.innerHTML += `<p>Nome: ${nome.value} <br> Sobrenome: ${sobrenome.value} <br> Peso: ${peso.value} <br> Altura: ${altura.value}</p>`
     }
