@@ -1,6 +1,6 @@
-// const nomes = new Array('Eduardo', 'Maria', 'Joana');
-// nomes[2] = 'João';
-// delete nomes[2];
+const nomes = new Array('Eduardo', 'Maria', 'Joana');
+nomes[2] = 'João';
+delete nomes[2];
 
 
 // const nomes = ['Eduardo', 'Maria', 'Joana', 'ualace', 'rosana'];
@@ -19,6 +19,6 @@
 // const nome = 'William Italia Nogueira';
 // const nomes = nome.split(' ');
 
-const nomes = [ 'William', 'Italia', 'Nogueira' ];
+const nomes = ['William', 'Italia', 'Nogueira'];
 const nome = nomes.join('-');
 console.log(nome);
