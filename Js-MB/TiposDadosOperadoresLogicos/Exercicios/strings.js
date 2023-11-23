@@ -7,5 +7,6 @@ for (let i of arr) {
   } else {
     semPares.push(i);
   }
-  console.log(semPares);
 }
+console.log();
+console.log(semPares);
