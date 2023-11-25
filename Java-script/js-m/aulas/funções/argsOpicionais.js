@@ -1,6 +1,6 @@
 function cadastro(nome, idade, sexo) {
 
-  if (typeof nome === 'string' && typeof idade === 'number') {
+  if (typeof nome === 'string' && nome.trim() != '' && typeof idade === 'number') {
 
     if (sexo != undefined) {
       console.log(`Seu nome é: ${nome}, sua idade é ${idade}, e seu sexo é: ${sexo}`);
@@ -17,6 +17,6 @@ function cadastro(nome, idade, sexo) {
   }
 }
 
-cadastro('william', 18, "Bicicleta");
+cadastro('w', 12, 'batata');
 
 
