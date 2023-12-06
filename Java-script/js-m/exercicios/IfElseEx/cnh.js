@@ -1,4 +1,4 @@
-let idade = 12;
+let idade = 20;
 let cnh = false;
 
 // if(idade >= 18) {
