@@ -11,6 +11,8 @@ let cnh = false;
 //     console.log("menor de idade")
 // }
 
+// testando o git
+
 if(idade >= 18 && cnh === true) {
     console.log("Tem permissão para dirigir")
 } else if (idade >= 18 && cnh === false) {
