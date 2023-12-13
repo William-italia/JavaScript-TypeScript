@@ -12,7 +12,7 @@ function meuEscopo() {
     const altura = form.querySelector(".Altura");
     const peso = form.querySelector(".Peso");
 
-    if (nome.value.trim() !== "" && sobrenome.value.trim() !== "" && altura.value.trim() !== "" && pese.value.trim() !== "") {
+    if (nome.value.trim() !== "" && sobrenome.value.trim() !== "" && altura.value.trim() !== "" && peso.value.trim() !== "") {
       pessoas.push({
         nome: nome.value.trim(),
         sobrenome: sobrenome.value.trim(),
@@ -21,17 +21,16 @@ function meuEscopo() {
       });
 
       resultado.innerHTML += `<p>${nome.value.trim()}, ${sobrenome.value.trim()}, ${altura.value.trim()}, ${peso.value.trim()}</p>`;
-
-      // Limpar os valores dos inputs
+      console.log(pessoas);
+      
       nome.value = "";
       sobrenome.value = "";
       altura.value = "";
       peso.value = "";
 
-      // Voltar o foco para o primeiro input
+      
       nome.focus();
     } else {
-      // Adicione aqui a lógica para lidar com campos vazios, se necessário
       alert("Por favor, preencha todos os campos.");
     }
   });

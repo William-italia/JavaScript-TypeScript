@@ -22,6 +22,7 @@ function cadastro(nome, idade, sexo) {
     }
 
   }
+  
   else {
     console.log("Os campos de nome e idade precisam ser cadastrados");
   }
