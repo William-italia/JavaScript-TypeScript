@@ -2,8 +2,18 @@ function cadastro(nome, idade, sexo) {
 
   if (typeof nome === 'string' && nome.trim() != '' && typeof idade === 'number') {
 
-    if (sexo != undefined) {
-      console.log(`Seu nome é: ${nome}, sua idade é ${idade}, e seu sexo é: ${sexo}`);
+    if (sexo != undefined && sexo.trim() != '') {
+
+      const sexoV = sexo.toLowerCase();
+
+      if(sexoV === "masculino" || sexoV === "feminino") {
+        console.log(`Seu nome é: ${nome}, sua idade é ${idade}, e seu sexo é: ${sexo}`);
+      }
+      else {
+       console.log(`Seu nome é: ${nome}, sua idade é ${idade}`);
+       console.log(`Sexo invalido`);
+      }
+      
     }
 
     else {
@@ -17,6 +27,6 @@ function cadastro(nome, idade, sexo) {
   }
 }
 
-cadastro('w', 12, 'batata');
+cadastro('w', 12, 'masculino');
 
 
