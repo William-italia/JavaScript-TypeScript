@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="conversor">
+            <h1 class="heading">Conversão de Temperaturas</h1>
+        <form id="form">
+        
+        <div class="box-escala">
+            <label for="escala">Escala:</label>
+            
+            <select id="escala">
+                <option value="celsius">Celsius</option>
+                <option value="fahrenheit">Fahrenheit</option>
+            </select>
+        </div>
+
+        <div class="box-temp">
+            <label for="Temperatura">Temperatura:</label>
+            <input type="number" id="temperatura" placeholder="insira a temperatura" required>
+        </div>
+
+        <button class="btn" type="button" onclick="converterTemperatura()">Converter</button>
+        <p id="resultado">Por Favor, digite uma temperatura válida!</p>
+        </form>
+        </div>
+    </div>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
