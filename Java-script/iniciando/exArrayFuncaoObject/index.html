@@ -4,20 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <form>
-        <label for="name">Name:</label>
-        <input type="text">
-        
-        <label for="name">Sobrenome:</label>
-        <input type="text">
-        
-        <label for="name">Peso:</label>
-        <input type="text">
-        
-        <label for="name">Altura:</label>
-        <input type="text">
-    </form>
+    <div class="container">
+        <form class="form" method="get">
+            <div class="box">
+                <label for="name">Name:</label>
+                <input type="text" class="nome">
+            </div>
+            
+            <div class="box">
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" class="sobrenome">
+            </div>
+            
+            <div class="box">
+                <label for="peso">Peso:</label>
+                <input type="text" class="peso">
+            </div>
+            
+            <div class="box">
+                <label for="altura">Altura:</label>
+                <input type="text" class="altura">
+            </div>
+            <button class="btn">Enviar</button>
+        </form>
+        <div class="resultado"></div>
+    </div>
+    <script src="./assets/js/app.js"></script>
 </body>
 </html>
