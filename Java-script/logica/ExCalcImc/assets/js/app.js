@@ -1,9 +1,9 @@
 function calculadoraImc() {
 
     const form = document.querySelector("#form");
+    form.addEventListener('submit', receberForm);
 
-    form.addEventListener('submit', function (e) {
-
+    function receberForm(e) {
         e.preventDefault();
 
         const inputPeso = e.target.querySelector("#peso");
@@ -12,18 +12,7 @@ function calculadoraImc() {
         const peso = Number(inputPeso.value);
         const altura = Number(inputAltura.value);
 
-        if (!peso && !altura) {
-            setResultado("Digite valores validos", false);
-            return;
-        }
-        if(!peso) {
-            setResultado("Digite um peso valido", false);
-            return;
-        }
-        if(!altura) {
-            setResultado("Digite uma altura valida", false);
-            return;
-        }
+        if(!validarCampos(altura, peso)) return;
 
         const imc = getIMC(altura, peso);   
         const nivel = getNivelImc(imc);
@@ -31,7 +20,35 @@ function calculadoraImc() {
         const msg = `Seu imc é: ${imc}, ${nivel}`;
 
         setResultado(msg, true);
-    });
+    }
+
+    function limpaInput() {
+        const inputPeso = document.querySelector("#peso");
+        const inputAltura = document.querySelector("#altura");
+
+        inputPeso.value = '';
+        inputAltura.value = '';
+        inputPeso.focus();
+    }
+
+    function validarCampos(altura, peso) {
+        if (!peso && !altura) {
+            setResultado("Digite valores validos", false);
+            return false;
+        }
+
+        if(!peso) {
+            setResultado("Digite um peso valido", false);
+            return false;
+        }
+
+        if(!altura) {
+            setResultado("Digite uma altura valida", false);
+            return false;
+        }
+
+        return true;
+    };
 
     function getIMC(altura, peso) {
         const imc = peso / altura ** 2;
@@ -70,6 +87,7 @@ function calculadoraImc() {
 
         p.innerHTML = msg;
         resultado.appendChild(p);
+        limpaInput();
     }
 }
 
