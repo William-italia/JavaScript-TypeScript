@@ -61,9 +61,19 @@ form > h1 {
     margin-top: 2rem;
 }
  
-/*.resultado {
-    background: greenyellow;
+.resultado {
     margin-top: 1rem;
-    padding: 1rem;
     text-align: center;
-} */
+}
+
+p.result {
+    padding: 1rem;
+}
+
+.resultado .success {
+    background: greenyellow;
+}
+
+.resultado .bad {
+    background: rgb(236, 86, 86);
+}
