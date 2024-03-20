@@ -18,3 +18,7 @@ console.warn('Warning');
 
 console.table({name: 'william', email: 'williamitalia@outlook.com'});
 console.groupEnd();
+
+const style = 'padding: 10px; background-color: red;';
+
+console.log('Estilizações: ', style);
