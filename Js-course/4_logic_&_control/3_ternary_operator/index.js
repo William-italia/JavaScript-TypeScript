@@ -33,4 +33,4 @@ const auth = true;
 
 // auth ? console.log('Welcome to the dashboard') : null;
 
-auth && console.log('Welcome to the dashboard');
+auth && console.log('Welcome to the dashboard')
