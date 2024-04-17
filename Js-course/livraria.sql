@@ -6,11 +6,11 @@ CREATE TABLE tb_cliente (
     nome VARCHAR(50),
     endereco VARCHAR(100),
     nr_endereco INT,
-    cpf CHAR(11),
+    cpf CHAR(11) UNIQUE,
     cnpj CHAR(14),
     telefone VARCHAR(11)
     );
-    
+     
 CREATE TABLE tb_compra (
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	dt_compra TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
