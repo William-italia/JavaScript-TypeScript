@@ -11,6 +11,7 @@ const companies = [
 ];
 
 const companyNames = companies.map((company) => `Compania: ${company.name}`);
+
 const companyInfo = companies.map((company) => {
     return {
         name: company.name,
@@ -20,13 +21,22 @@ const companyInfo = companies.map((company) => {
 
 console.log(companyInfo);
 
+// const companyYears = companies.map((company) => {
+//     let years = company.end - company.start;
+//     return {
+//         name: company.name,
+//         years: years,
+//     };
+// });
+
 const companyYears = companies.map((company) => {
     let years = company.end - company.start;
     return {
         name: company.name,
-        years: years,
-    };
-});
+        categories: company.category,
+        years: years
+    }
+}).filter((company) => company.years > 22);
 
 console.log(companyYears);
 

@@ -5,12 +5,20 @@ const users = [
     { name: 'Kate' },
     { name: 'Steve' }
 
-
 ];
 
 // for (const item of items) {
 //     console.log(item);
 // }
+
+// for (const item in items) {
+//     console.log(item);
+// }
+
+// for (const item of items) {
+//     console.log(item);
+// }
+
 // for (const user of users) {
 //     console.log(user.name);
 // }
@@ -31,16 +39,16 @@ const users = [
 
 // for in
 
-const colorObj = {
-    color1: 'red',
-    color2: 'blue',
-    color3: 'yellow',
-    color4: 'green',
-};
+// const colorObj = {
+//     color1: 'red',
+//     color2: 'blue',
+//     color3: 'yellow',
+//     color4: 'green',
+// };
 
-for (const key in colorObj) {
-    console.log(key, colorObj[key]);
-}
+// for (const key in colorObj) {
+//     console.log(key, colorObj[key]);
+// }
 
 const colorArr = ['red', 'blue', 'yellow', 'green'];
 

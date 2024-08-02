@@ -5,8 +5,9 @@ const socials = ['X', 'Linkedin', 'Facebook', 'Instagram', 'Github'];
 //     console.log(`${index} - ${item}`);
 // });
 
-// function logSocials(social) {
-//     console.log(social);
+// function logSocials(social, index) {
+//     index++;
+//     console.log(index, social);
 // }
 
 // socials.forEach(logSocials);
@@ -19,4 +20,5 @@ const socialObjs = [
     { name: 'Github', url: 'https://github.com' },
 ];
 
-socialObjs.forEach((item) => console.log(item.name + ' ' + item.url));
+socialObjs.forEach((element) => console.log(element.name, element.url)
+);

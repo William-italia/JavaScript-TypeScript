@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Churrasco</title>
+</head>
+
+<body>
+
+    <h2>Calculadora de Churrasco</h2>
+
+    <div>
+        <label for="adultosBebemAlcool">Adultos (bebem álcool):</label>
+        <input type="number" id="adultosBebemAlcool" value="0">
+    </div>
+
+    <div>
+        <label for="adultosNaoBebemAlcool">Adultos (não bebem álcool):</label>
+        <input type="number" id="adultosNaoBebemAlcool" value="0">
+    </div>
+
+    <div>
+        <label for="criancas">Crianças:</label>
+        <input type="number" id="criancas" value="0">
+    </div>
+
+    <button onclick="calcularChurrasco()">Calcular</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function calcularChurrasco() {
+            const adultosBebemAlcool = parseInt(document.getElementById('adultosBebemAlcool').value);
+            const adultosNaoBebemAlcool = parseInt(document.getElementById('adultosNaoBebemAlcool').value);
+            const criancas = parseInt(document.getElementById('criancas').value);
+
+            const carnePorAdulto = 400; // em gramas
+            const acompanhamentosPorAdulto = 200; // em gramas
+            const cervejaPorAdulto = 2; // em litros
+            const refrigerantePorAdulto = 0.5; // em litros
+            const aguaPorAdulto = 0.4; // em litros
+            const refrigerantePorCrianca = 0.5; // em litros
+            const aguaPorCrianca = 0.4; // em litros
+
+            // Cálculo da quantidade total de itens
+            const carneTotal = (carnePorAdulto * (adultosBebemAlcool + adultosNaoBebemAlcool) + acompanhamentosPorAdulto * (adultosBebemAlcool + adultosNaoBebemAlcool) + carnePorAdulto * criancas) / 1000; // Convertendo para quilogramas
+            const acompanhamentosTotal = (acompanhamentosPorAdulto * (adultosBebemAlcool + adultosNaoBebemAlcool) + acompanhamentosPorAdulto * criancas) / 1000; // Convertendo para quilogramas
+            const cervejaTotal = cervejaPorAdulto * adultosBebemAlcool;
+            const refrigeranteTotal = refrigerantePorAdulto * adultosBebemAlcool + refrigerantePorCrianca * criancas;
+            const aguaTotal = aguaPorAdulto * (adultosBebemAlcool + adultosNaoBebemAlcool) + aguaPorCrianca * criancas;
+
+            // Exibindo os resultados
+            const resultadoHTML = `
+                        <h3>Quantidade de itens necessários para o churrasco:</h3>
+                        <p>Carne: ${carneTotal.toFixed(1)} kg</p>
+                        <p>Acompanhamentos: ${acompanhamentosTotal.toFixed(1)} kg</p>
+                        <p>Cerveja: ${cervejaTotal.toFixed(1)} l</p>
+                        <p>Refrigerante: ${refrigeranteTotal.toFixed(1)} l</p>
+                        <p>Água: ${aguaTotal.toFixed(1)} l</p>
+                        `;
+            document.getElementById('resultado').innerHTML = resultadoHTML;
+        }
+    </script>
+
+</body>
+
+</html>
