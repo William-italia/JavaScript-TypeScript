@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const clearAll = document.querySelector('#clear');
     const filter = document.querySelector('#filter');
 
-
     form.addEventListener('submit', handlFormSubmit);
 
     clearAll.addEventListener('click', clearAllF);
@@ -100,14 +99,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const items = itemList.querySelectorAll('li');
 
         items.forEach(item => {
-            const itemText = item.textContent.toLowerCase();
+            const itemText = item.textContent.toLocaleLowerCase();
 
             if (itemText.includes(filterText)) {
-                item.style.display = 'flex';
+                item.style.display = "flex";
             } else {
-                item.style.display = 'none';
+                item.style.display = "none";
             }
         })
-
     }
 });
