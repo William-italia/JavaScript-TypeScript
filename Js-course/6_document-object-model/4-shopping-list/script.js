@@ -15,7 +15,12 @@
 
 // document.querySelector('#item-list').appendChild(li);
 
-document.addEventListener('DOMContentLoaded', () => {
+
+function DOMContentLoaded(callback) {
+    document.addEventListener('DOMContentLoaded', callback);
+}
+
+DOMContentLoaded(() => {
 
     const form = document.querySelector('#item-form');
     const itemInput = document.querySelector('#item-input');
@@ -23,9 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const clearAll = document.querySelector('#clear');
     const filter = document.querySelector('#filter');
 
-    form.addEventListener('submit', handlFormSubmit);
+    form.addEventListener('submit', handleFormSubmit);
 
-    clearAll.addEventListener('click', clearAllF);
+    clearAll.addEventListener('click', () => { clearAllF(); clearFilter() });
 
     itemList.addEventListener('click', itemRemoveF);
 
@@ -33,26 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     VerificaOestadoDaLista(itemList);
 
-    function addItemToList(item) {
-
-        const li = document.createElement('li');
-        li.className = 'item';
-
-        const button = document.createElement('button');
-        button.className = 'remove-item btn-link text-red';
-        button.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-
-        const text = document.createTextNode(item);
-
-        li.appendChild(text);
-        li.appendChild(button);
-
-        itemList.appendChild(li);
-
-        VerificaOestadoDaLista(itemList);
-    }
-
-    function handlFormSubmit(e) {
+    function handleFormSubmit(e) {
 
         e.preventDefault();
 
@@ -60,10 +46,84 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (newItem) {
             addItemToList(newItem);
-
             itemInput.value = '';
         }
 
+    }
+
+    function addItemToList(itemText) {
+        const li = createElement(itemText);
+        appendLiToContainer(li, '.items');
+        VerificaOestadoDaLista(itemList);
+    }
+
+    function createElement(item) {
+
+        const button = createButton('remove-item btn-link text-red');
+
+        const icon = createIcon('fa-solid fa-xmark');
+
+        const text = createText(item);
+
+        const li = createLi('item');
+
+        addAppendChilds(li, [text, button]);
+        addAppendChilds(button, [icon]);
+
+        return li;
+    }
+
+    function createButton(classes) {
+        const button = document.createElement('button');
+        button.className = classes;
+
+        return button;
+    }
+
+    function createIcon(classes) {
+        const icon = document.createElement('i');
+        icon.className = classes;
+
+        return icon;
+    }
+
+    function createText(item) {
+        const text = document.createTextNode(item);
+
+        return text;
+    }
+
+    function createLi(classes) {
+        const li = document.createElement('li');
+        li.className = classes;
+
+        return li;
+    }
+
+    function addAppendChilds(element, filhos) {
+        filhos.forEach(filho => {
+            element.appendChild(filho);
+        });
+    }
+
+    function appendLiToContainer(li, containerSelector) {
+        const container = document.querySelector(containerSelector);
+
+        if (container) {
+            container.appendChild(li);
+        } else {
+            alert('Esse container não existe!');
+        }
+
+    }
+
+    function VerificaOestadoDaLista(lista) {
+        // lista.childElementCount
+        if (lista.innerHTML.trim() === '' || lista.children.length < 2) {
+            clearAll.style.display = 'none';
+        } else {
+            clearAll.style.display = 'inline-block';
+        }
     }
 
     function itemRemoveF(e) {
@@ -80,14 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
         VerificaOestadoDaLista(itemList);
     }
 
-    function VerificaOestadoDaLista(lista) {
-        if (lista.innerHTML.trim() === '') {
-            clearAll.style.display = 'none';
-        } else {
-            clearAll.style.display = 'inline-block';
-        }
-    }
-
     function clearAllF() {
         itemList.innerHTML = '';
 
@@ -99,13 +151,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const items = itemList.querySelectorAll('li');
 
         items.forEach(item => {
-            const itemText = item.textContent.toLocaleLowerCase();
-
+            const itemText = item.textContent.toLowerCase();
             if (itemText.includes(filterText)) {
                 item.style.display = "flex";
             } else {
                 item.style.display = "none";
             }
         })
+    }
+
+    function clearFilter() {
+        filter.value = '';
+        filterF();
     }
 });
