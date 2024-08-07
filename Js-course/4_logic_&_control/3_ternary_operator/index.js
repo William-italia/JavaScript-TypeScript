@@ -7,11 +7,11 @@
 // }
 
 // Using a ternary operator
-// age >= 18 ? console.log('You can vote!') : console.log("You can not vote!");
-// const canVote = age >= 18 ? "You can vote!" : "You can not vote!";
-// const canVote2 = age >= 18 ? true : false;
+age >= 18 ? console.log('You can vote!') : console.log("You can not vote!");
+const canVote = age >= 18 ? "You can vote!" : "You can not vote!";
+const canVote2 = age >= 18 ? true : false;
 
-// console.log(canVote);
+console.log(canVote);
 // console.log(canVote2);
 
 // multiple statements
