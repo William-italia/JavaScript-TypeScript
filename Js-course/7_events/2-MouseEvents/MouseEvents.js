@@ -18,27 +18,27 @@ const onDoubleClick = () => {
     // }
 };
 
-const onRightClick = () => console.log('right click event');
-const onMouseDown = () => console.log('down');
-const onMouseUp = () => console.log('up');
-const onMouseWheel = () => console.log('wheel');
-const onMouseOver = () => console.log('Over');
-const onMouseOut = () => console.log('Out');
-const onDragStart = () => console.log('Drag start');
-const onDrag = () => console.log('Drag');
-const onDragEnd = () => console.log('Drag End');
-const onDragLeave = () => console.log('Drag Leave');
+// const onRightClick = () => console.log('right click event');
+// const onMouseDown = () => console.log('down');
+// const onMouseUp = () => console.log('up');
+// const onMouseWheel = () => console.log('wheel');
+// const onMouseOver = () => console.log('Over');
+// const onMouseOut = () => console.log('Out');
+// const onDragStart = () => console.log('Drag start');
+// const onDrag = () => console.log('Drag');
+// const onDragEnd = () => console.log('Drag End');
+// const onDragLeave = () => console.log('Drag Leave');
 
 
-logo.addEventListener('click', onClick1);
-logo.addEventListener('dblclick', onDoubleClick);
-logo.addEventListener('contextmenu', onRightClick);
-logo.addEventListener('mousedown', onMouseDown);
-logo.addEventListener('mouseup', onMouseUp);
-logo.addEventListener('wheel', onMouseWheel);
-logo.addEventListener('mouseover', onMouseOver);
-logo.addEventListener('mouseout', onMouseOut);
-logo.addEventListener('dragstart', onDragStart);
-logo.addEventListener('drag', onDrag);
-logo.addEventListener('dragend', onDragEnd);
-logo.addEventListener('dragleave', onDragLeave);
+// logo.addEventListener('click', onClick1);
+// logo.addEventListener('dblclick', onDoubleClick);
+// logo.addEventListener('contextmenu', onRightClick);
+// logo.addEventListener('mousedown', onMouseDown);
+// logo.addEventListener('mouseup', onMouseUp);
+// logo.addEventListener('wheel', onMouseWheel);
+// logo.addEventListener('mouseover', onMouseOver);
+// logo.addEventListener('mouseout', onMouseOut);
+// logo.addEventListener('dragstart', onDragStart);
+// logo.addEventListener('drag', onDrag);
+// logo.addEventListener('dragend', onDragEnd);
+// logo.addEventListener('dragleave', onDragLeave);
