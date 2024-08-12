@@ -37,7 +37,7 @@ function showKeyCodes(e) {
     // texto small que indentifica as caixas e.key, e.keycode e e.code
     const keyText = document.createTextNode(key);
 
-    // isso é o valor da chave
+    // isso é o valor da chavea
     const valueKey = document.createTextNode(keyCodes[key]);
 
     // small.appendChild(keyText);
