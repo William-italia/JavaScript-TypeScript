@@ -71,6 +71,11 @@ function onAddItemSubmit(e) {
         itemEdit.classList.remove('edit-mode');
         itemEdit.remove();
         isEditMode = false;
+    } else {
+        if (checkIfItemExists(newItem)) {
+            alert('Esse item já existe!');
+            return;
+        }
     }
 
     addItemToDOM(newItem);
@@ -93,7 +98,13 @@ function filterItems() {
             item.style.display = "none";
         }
     });
+}
 
+
+
+function checkIfItemExists(item) {
+    const itemsFromStorage = getItemsFromStorage();
+    return itemsFromStorage.includes(item);
 }
 
 function onClickItem(e) {
