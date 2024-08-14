@@ -1,4 +1,4 @@
-let x; 
+let x;
 const arr = [1, 2, 3, 4, 5];
 
 
@@ -29,3 +29,11 @@ x = arr.slice(2, 4);
 x = arr.splice(3, 1).reverse().toString().charAt(0);
 
 console.log(x, arr);
+
+// teste
+// teste
+// teste
+// teste
+// teste
+// teste
+// teste
